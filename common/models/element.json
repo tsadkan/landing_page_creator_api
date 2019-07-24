@@ -1,0 +1,23 @@
+{
+  "name": "element",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "content": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "column": {
+      "type": "belongsTo",
+      "model": "column",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

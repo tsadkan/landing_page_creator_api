@@ -34,5 +34,25 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "page": {
+    "dataSource": "db",
+    "public": true
+  },
+  "section": {
+    "dataSource": "db",
+    "public": true
+  },
+  "element": {
+    "dataSource": "db",
+    "public": true
+  },
+  "row": {
+    "dataSource": "db",
+    "public": true
+  },
+  "column": {
+    "dataSource": "db",
+    "public": true
   }
 }

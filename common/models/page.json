@@ -1,0 +1,35 @@
+{
+  "name": "page",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "featuredImage": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": ""
+    },
+    "sections": {
+      "type": "hasMany",
+      "model": "section",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
