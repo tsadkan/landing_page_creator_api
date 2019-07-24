@@ -9,6 +9,10 @@
     "index": {
       "type": "string",
       "required": true
+    },
+    "columnWidth": {
+      "type": "Number",
+      "required": true
     }
   },
   "validations": [],
