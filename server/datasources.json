@@ -4,8 +4,7 @@
     "connector": "memory"
   },
   "mongo": {
-    "host": "localhost",
-    "port": 27017,
+    "url": "mongodb+srv://tsadkan:tsadkan@cluster0-kjfvz.mongodb.net/test?retryWrites=true&w=majority",
     "database": "landingpage",
     "name": "mongo",
     "connector": "mongodb",
