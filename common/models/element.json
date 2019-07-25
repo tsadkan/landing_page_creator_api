@@ -6,12 +6,12 @@
     "validateUpsert": true
   },
   "properties": {
-    "content": {
+    "element": {
       "type": "string",
       "required": true
     },
     "type": {
-      "type": "string",
+      "type": "object",
       "required": true
     }
   },
