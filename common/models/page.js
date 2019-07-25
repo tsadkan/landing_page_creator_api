@@ -1,5 +1,5 @@
 module.exports = function(Page) {
-    Page.createPage = async (accessToken, pageId, sectionList, title, description)=> {
+    Page.createPage = async (accessToken, pageId, sectionList, title, description, featuredImage)=> {
         if (!accessToken || !accessToken.userId) {
             throw Error("Unauthorized User", 403);
         }
@@ -10,6 +10,7 @@ module.exports = function(Page) {
         const page = await Page.create({
             title,
             description,
+            featuredImage,
             userId
         });
 
@@ -41,18 +42,6 @@ module.exports = function(Page) {
             });
         });
 
-        // await Promise.all(
-        //     sectionList.map(async section => {
-        //         const section = await section.create({
-        //             index: section.index,
-        //             pageId: page.id
-        //         });
-
-        //         section.rows.map
-        //     })
-        // )
-        console.log(sectionList, title, description);
-
         return { status: true };
     };
     
@@ -71,7 +60,8 @@ module.exports = function(Page) {
             { arg: "pageId", type: "string" },
             { arg: "sectionList", type: "array", required:true },
             { arg: "title", type: "string", required:true },
-            { arg: "description", type: "string" }
+            { arg: "description", type: "string" },
+            { arg: "featuredImage", type: "string" }
         ],
         returns: { type: "object", root: true },
         http: { path: "/create-page", verb: "post" }
